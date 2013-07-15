@@ -17,9 +17,7 @@
     ("youtube" . creole-youtube-handler)))
 
 (defun tapas-resolver (name)
-  (if (string-match-p "^[A-Za-z-]+" name)
-      (concat tapas-docroot name ".creole")
-      name))
+  name)
 
 (defmacro with-creole-embeds (embed-list &rest code)
   (declare (indent 1))
@@ -46,7 +44,8 @@ an HR element.  The HR elements are retained."
   (noflet ((heading->section-id (heading)
              (format
               "%s-row"
-              (replace-regexp-in-string "[ ?]" "-" (cdr heading)))))
+              (replace-regexp-in-string
+               "[ ?]" "-" (cdr heading)))))
     (let ((tx
            (loop for e in struct
               append
@@ -66,29 +65,53 @@ an HR element.  The HR elements are retained."
 <div class=\"container\">
 <div class=\"row\">"))
        tx
-       '((plugin-html . "</div></div>"))))))
+       '((plugin-html . "</div></div></div><footer>")
+         (ul
+          "(C) 2013 Nic Ferrier"
+          "[[terms|terms]]"
+          "[[contact|contact]]")
+         (plugin-html . "</footer>"))))))
 
-(defun tapas-creole (page destination)
+(defun tapas-creole (creole-file destination &optional css)
+  "Abstract the creole rendering to HTML a little."
   (interactive
    (list
-    "main.creole"
+    (concat tapas-indexroot "main.creole")
     (get-buffer-create "*testcreole*")))
   (creole-wiki
-   (concat tapas-indexroot page)
+   creole-file
    :destination destination
    :structure-transform-fn 'tapas-creole->bootstrap
    :doctype 'html5
    :css (list "/-/bootstrap/css/bootstrap.css"
-              "/-/main.css"))
+              "/-/common.css"
+              (case css
+                (:main "/-/main.css")
+                (:index "/-/index.css")
+                (t "/-/episode.css"))))
   (when (called-interactively-p 'interactive)
     (switch-to-buffer destination)))
 
-;; Might do for the index page
-(defun tapas-main (httpcon)
+(defun tapas-creole-page (httpcon filename &optional css)
   (with-creole-embeds tapas-embed-handlers
     (elnode-http-start httpcon 200 '("Content-type" . "text/html"))
     (with-stdout-to-elnode httpcon
-        (tapas-creole "main.creole" t))))
+        (tapas-creole filename t css))))
+
+(defun tapas-episode (httpcon)
+  "Episode server."
+  (noflet ((elnode-http-mapping (httpcon which)
+             (concat (funcall this-fn httpcon 1) ".creole")))
+    (elnode-docroot-for tapas-docroot
+        with targetfile
+        on httpcon
+        do
+        (tapas-creole-page httpcon targetfile))))
+
+;; Might do for the index page
+(defun tapas-main (httpcon)
+  (let ((page (concat tapas-indexroot "main.creole")))
+    (tapas-creole-page httpcon page :main)))
 
 (defconst tapas-assets-server
   (elnode-webserver-handler-maker
@@ -100,9 +123,11 @@ an HR element.  The HR elements are retained."
   (elnode-hostpath-dispatcher
    httpcon
    `(("^[^/]+//$" . tapas-main)
-     ("^[^/]+//favicon.ico" . ,(elnode-make-send-file
-                                (concat tapas-root "../assets/olive.ico")))
-     ("^[^/]+//-/\\(.*\\)" . ,tapas-assets-server))))
+     ("^[^/]+//favicon.ico"
+      . ,(elnode-make-send-file
+          (concat tapas-root "../assets/olive.ico")))
+     ("^[^/]+//-/\\(.*\\)" . ,tapas-assets-server)
+     ("^[^/]+//episode/\\(.*\\)" . tapas-episode))))
 
 (defun tapas-start ()
   (interactive)

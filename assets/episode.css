@@ -1,0 +1,11 @@
+
+img {
+    float: right;
+    margin-left: 30px;
+}
+
+hr {
+    height: 3px;
+    border: 0px;
+    background-color: #004400;
+}
