@@ -1,0 +1,14 @@
+coming soon...
+
+how to use lists to store dictonary data; alists are highly pragmatic
+but very simple to construct and handle.
+
+What we will cover
+
+* making alists with backticks
+* making alists with functions
+* {{{assoc}}}
+* {{{assq}}}
+* plists
+* {{{plist-get}}}
+* {{{plist-put}}}

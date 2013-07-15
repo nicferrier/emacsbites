@@ -1,0 +1,13 @@
+EmacsLisp doesn't just have lists, it has other data structures that
+are useful.
+
+* vectors
+** {{{make-vector}}}
+** vector literals
+* hashtables
+** {{{make-hash-table}}}
+** hash-table literals
+* obarrays
+* strings
+** string properties
+** {{{propertize}}}

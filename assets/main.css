@@ -1,0 +1,70 @@
+body {
+    width: 100%;
+}
+
+h1 {
+    padding-bottom: 1em;
+    color: GhostWhite;
+}
+
+.section {
+    background-color: Snow;
+    color: #004400;
+    border: thin solid #004400;
+    width: 100%;
+    font-size: 16pt;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    clear: both;
+    line-height: 1.5;
+}
+
+#sec-top {
+    background-color: DarkGreen;
+    color: OldLace;
+}
+
+#sec-top * p {
+    font-size: 36pt;
+}
+
+#why-tapas--row {
+    background-color: DarkGreen;
+    color: OldLace;
+}
+
+
+img {
+    float: right;
+    margin-left: 30px;
+}
+
+pre {
+    margin: 1em 2em 2em 1em !important;
+    font-size: 12pt !important;
+}
+
+span.keyword {
+    font-size: 12pt !important;
+}
+
+span.string {
+    font-size: 12pt !important;
+}
+
+h2 {
+    font-size: 36pt;
+}
+
+a > span.youtube {
+    display: block;
+    float: right;
+    margin: 30px 30px 30px 30px;
+}
+
+iframe + em  {
+    font-size: 18pt;
+    display: block;
+    text-align: right;
+    color: DarkGreen;
+}

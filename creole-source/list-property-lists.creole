@@ -1,0 +1,6 @@
+
+* more on plists
+** `symbol-plist'
+** `setplist'
+** `defun*'
+** `destructuring-bind'

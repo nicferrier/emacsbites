@@ -1,0 +1,12 @@
+= Introduction =
+
+This is the EmacsLisp tapas. Tapas was invented by the Spanish as a
+tasty collection of dishes from which you could pick and choose a
+variety of lovely flavours. But then it was reinvented by Adve Grimm
+as a collection of edible screencasts about Ruby.
+
+Why do this for EmacsLisp? There is the Emacs Lisp Introduction and
+there is the Emacs Lisp reference manual but there is no Emacs Lisp
+for Programmers. I'd love to write one but I don't have the
+time. Instead I'll make these little videos.
+

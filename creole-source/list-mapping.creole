@@ -1,0 +1,8 @@
+* list mapping
+** map
+** mapcar
+** mapc
+** mapconcat
+** loop
+** -map
+** --map

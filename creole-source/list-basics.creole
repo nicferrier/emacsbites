@@ -1,0 +1,43 @@
+lists are fundamental to any Lisp because of their simplicity and
+generality. they are the defining feature of the lisp programming
+style, and responsible for the name - //LISt Processing//
+
+
+* {{{M-x package-install smartparens}}}
+
+smartparens, or the older {{{paredit}}} package are great for moving
+around lists. 
+
+* {{{list}}}
+
+to make a list, use the {{{list}}} form.
+
+* list literals
+
+quoted {{{'(lists)}}} and {{{`(backquoted lists)}}} are great for
+structure.
+
+* {{{length}}}
+
+how long is a list
+
+* {{{elt}}}
+
+get an element at an index.
+
+* {{{cons}}}
+
+make lists part by part.
+
+* {{{car}}}
+
+the head of the list.
+
+* {{{cdr}}}
+
+the rest of the list.
+
+* {{{cadr}}}
+
+composition of {{{car}}} and {{{cdr}}} and the arc anecdote.
+

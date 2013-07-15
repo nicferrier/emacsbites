@@ -1,0 +1,61 @@
+[[list-basics|{{youtube:WcUwCsAhWMk|basic list manipulation}}]]
+= emacs tapas =
+
+learn Emacs and Lisp with a simple, bite sized series of screencasts.
+
+[[#what-is-it--row|what?]] [[#why-tapas--row|why?]] [[#what-will-be-covered--row|when?]]
+
+== what is it? ==
+
+Emacs Tapas is a collection of short screen casts to help you learn
+the Emacs editor and the EmacsLisp programming language. It's also a
+really good way to learn the basics of programming Lisp, the skills
+transfer easily to programming in CommonLisp, Clojure or Scheme.
+
+{{{
+(let ((tapas 
+        (take-n (random 5) 
+                '(calamari potatas-bravas fritta tomate-salate
+                  scallops croquettas gambas))))
+  (do ((dish (car tapas)))
+    (with-current-buffer table-menu
+      (insert (format "dish: %s" dish)))
+    (setq tapas (cdr tapas))))
+}}}
+
+If you're fresh to programming learning EmacsLisp is a good way to get
+started, the concepts you'll learn here help you understand Ruby or
+Javascript and even Java and C.
+
+If you already program in some other language then Emacs Tapas will
+help you learn Lisp as a second language and understand how to
+write your own customizations for Emacs so you can be even more
+productive in whatever language you use.
+
+== why tapas? ==
+
+{{/-/tapas-picture.jpg|Jessica Spengler's tapas picture - http://www.flickr.com/photos/wordridden/3370372292/}}
+
+I totally stole the allusion to the Spanish dish Tapas
+from [[http://devblog.avdi.org/|Avdi Grimm]] who built the most
+excellent [[http://rubytapas.com]]
+
+The idea is that it's short and digestible and you can dip in and
+out. 
+
+We have screencasts on:
+
+* basic list manipulation
+* lisp scope
+* emacs buffer handling
+* lambda
+* error handling
+
+== what will be covered? ==
+
+At least the basics of Lisp programming, at least an introduction to
+functional programming as well as more advanced subjects like:
+packaging, testing, web programming and concurrency.
+
+If you have an idea for something that you think should be covered
+please drop me a line.
