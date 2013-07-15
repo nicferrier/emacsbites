@@ -100,6 +100,8 @@ an HR element.  The HR elements are retained."
   (elnode-hostpath-dispatcher
    httpcon
    `(("^[^/]+//$" . tapas-main)
+     ("^[^/]+//favicon.ico" . ,(elnode-make-send-file
+                                (concat tapas-root "../assets/olive.ico")))
      ("^[^/]+//-/\\(.*\\)" . ,tapas-assets-server))))
 
 (defun tapas-start ()
