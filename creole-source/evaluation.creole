@@ -1,5 +1,11 @@
-{{tapas:WcUwCsAhWMk|How to get the results of expressions in EmacsLisp.}}
+{{youtube:WcUwCsAhWMk|how to get the results of expressions in emacs}}
+= evaluating things =
 
+watch the movie now and learn how to get lisp working for you
+
+
+== keys ==
+----
 | key                         | description                                               |
 |-----------------------------+-----------------------------------------------------------|
 | C-x C-e                     | evaluate an expression                                    |
