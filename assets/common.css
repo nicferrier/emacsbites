@@ -11,14 +11,14 @@ footer {
     margin: 0 !important;
 }
 
-ul {
+footer ul {
     width: 960px;
     font-size: 20px;
     margin: 0 auto !important;
     color: DarkOrange;
 }
 
-ul li {
+footer ul li {
     display: inline;
     padding-left: 60px;
 }
