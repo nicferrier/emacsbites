@@ -1,5 +1,9 @@
+.section {
+    padding-bottom: 150px;
+}
+
 #why-tapas--row {
-    background-color: #004400;
+    background-color: #444444; /*#004400;*/
     color: OldLace;
 }
 
@@ -18,4 +22,13 @@ img {
 
 h2 {
     font-size: 36pt;
+}
+
+table {
+    margin: 0 auto;
+}
+
+table * td {
+    padding-left: 30px;
+    padding-right: 30px;
 }

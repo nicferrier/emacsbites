@@ -1,43 +1,35 @@
 lists are fundamental to any Lisp because of their simplicity and
-generality. they are the defining feature of the lisp programming
-style, and responsible for the name - //LISt Processing//
+generality; they are the defining feature of the lisp programming
+style and responsible for the name - //LISt Processing//
 
+== what's in the movie? ==
 
-* {{{M-x package-install smartparens}}}
+//making lists// with the {{{list}}} form or with //list literals// -
+quoted {{{'(lists)}}} and {{{`(backquoted lists)}}} 
 
-smartparens, or the older {{{paredit}}} package are great for moving
-around lists. 
+how list literals are great for structure
 
-* {{{list}}}
+{{{
+`(("nic"     . (("job" "hacker")
+                ("packages" ["elnode" "elpakit" "creole"])))
+  ("magnars" . (("job" "movie star")
+                ("packages" ["dash" "s.el" "mc"]))))
+}}}
 
-to make a list, use the {{{list}}} form.
+using
 
-* list literals
+{{{
+M-x package-install smartparens
+}}}
 
-quoted {{{'(lists)}}} and {{{`(backquoted lists)}}} are great for
-structure.
+[[http://github.com/Fuco1/smartparens|smartparens]], or the older
+{{{paredit}}} package are great for moving around lists.
 
-* {{{length}}}
+=== some functions ===
 
-how long is a list
-
-* {{{elt}}}
-
-get an element at an index.
-
-* {{{cons}}}
-
-make lists part by part.
-
-* {{{car}}}
-
-the head of the list.
-
-* {{{cdr}}}
-
-the rest of the list.
-
-* {{{cadr}}}
-
-composition of {{{car}}} and {{{cdr}}} and the arc anecdote.
+| {{{length}}} | how long is a list                                           |
+| {{{elt}}}    | get the element at an index.                                 |
+| {{{car}}}    | the head of the list.                                        |
+| {{{cdr}}}    | the rest of the list.                                        |
+| {{{cadr}}}   | composition of {{{car}}} and {{{cdr}}} and the arc anecdote. |
 

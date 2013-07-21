@@ -68,8 +68,8 @@ an HR element.  The HR elements are retained."
        '((plugin-html . "</div></div></div><footer>")
          (ul
           "(C) 2013 Nic Ferrier"
-          "[[terms|terms]]"
-          "[[contact|contact]]")
+          "[[/terms|terms]]"
+          "[[/contact|contact]]")
          (plugin-html . "</footer>"))))))
 
 (defun tapas-creole (creole-file destination &optional css)

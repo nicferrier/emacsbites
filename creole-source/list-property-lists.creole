@@ -1,6 +1,18 @@
+property lists are another way of labeling values in list structures
+- their utility comes from being flat and easy to read and write.
 
-* more on plists
-** `symbol-plist'
-** `setplist'
-** `defun*'
-** `destructuring-bind'
+== what's in the movie? ==
+
+making //plists// with //list literals//, what a //keyword// symbol
+is, how plists can be destructured.
+
+using the //kv// package to convert between association lists and
+plists.
+
+=== functions ===
+
+| {{{plist-get}}}          | get an item from a plist          |
+| {{{keywordp}}}           | is the argument a keyword symbol? |
+| {{{kvplist->alist}}}     | make a plist an alist             |
+| {{{kvalist->plist}}}     | make an alist a plist             |
+| {{{destructuring-bind}}} | convert a plist to variables      |

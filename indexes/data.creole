@@ -1,11 +1,15 @@
-= Working with data in EmacsLisp =
+= working with Lisp data =
 
-{{include:list-basics}}
+{{include:list-basics|the basics of list handling}}
 
-{{include:list-association-lists}}
+{{include:list-advanced|more advanced understanding of lists}}
 
-{{include:list-mapping}}
+{{include:list-association-lists|using lists to store key/value data}}
 
-{{include:data-basics}}
+{{include:list-mapping|basic looping over lists}}
 
-{{include:list-property-lists}}
+{{include:list-mapping-advanced|more advanced looping over lists}}
+
+{{include:data-basics|non-list data structures}}
+
+{{include:list-property-lists|a different sort of key/value store}}

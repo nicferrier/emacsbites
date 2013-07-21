@@ -1,8 +1,13 @@
-* list mapping
-** map
-** mapcar
-** mapc
-** mapconcat
-** loop
-** -map
-** --map
+doing something for or //to// every item in a list is often
+acomplished using //mapping//.
+
+== what's in the movie? ==
+
+introducing {{{lambda}}} and using the map functions.
+
+=== functions ===
+
+| mapcar    | basic emacs lisp mapping                           |
+| mapc      | map without a result                               |
+| mapconcat | map and automatically make a string of the results |
+

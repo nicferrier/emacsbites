@@ -1,11 +1,12 @@
+.section {
+    padding-bottom: 50px;
+}
 
 img {
     float: right;
     margin-left: 30px;
 }
 
-hr {
-    height: 3px;
-    border: 0px;
-    background-color: #004400;
+h2 {
+    border-bottom: 3px solid #004400;
 }

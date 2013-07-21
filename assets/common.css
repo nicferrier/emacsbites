@@ -5,7 +5,7 @@ body {
 }
 
 footer {
-    background-color: #003300;
+    background-color: Black;
     height: 50px;
     padding-top: 10px;
     margin: 0 !important;
@@ -35,7 +35,6 @@ h1 {
     border: thin solid #004400;
     font-size: 16pt;
     padding-top: 30px;
-    padding-bottom: 150px;
     clear: both;
     line-height: 1.5;
 }
