@@ -1,0 +1,16 @@
+mapping is so flexible there are lots of ways of doing it.
+
+== what's in the movie? ==
+
+introducing //dash// functions for mapping and the anaphoric forms.
+
+{{{
+M-x package-install dash
+}}}
+
+=== functions ===
+
+| -map     | basic mapping                  |
+| --map    | anaphoric map                  |
+| --filter | a map that's actually a filter |
+

@@ -1,0 +1,27 @@
+lists are actually a subtle and thought provoking data structure
+composed of cons cells, learn about their basic composition and how
+this is fundamental to Lisp.
+
+== what's in the movie? ==
+
+what a //cons// is; how to make them with {{{cons}} and access them
+with {{{car}}} and {{{cdr}}} and how to use //literal syntax// for
+conses.
+
+what {{{nil}}} is and what //lists// really are and how //improper
+lists// are lists that don't end with a list.
+
+and doing
+
+{{{
+M-x package-install memory-usage
+}}}
+
+for showing interesting information about conses.
+
+=== functions ===
+
+| {{{cons}}} | make lists part by part. |
+| {{{car}}}  | the car of the cons      |
+| {{{cdr}}}  | the cdr of the cons      |
+
