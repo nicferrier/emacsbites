@@ -1,0 +1,17 @@
+emacs is a complex program and there's a lot you can do with it, this
+is a crash course into the basics of Lisp programming.
+
+== what's in the movie? ==
+
+starting a sandboxed Emacs that won't interfere with another using the
+//realpath// program.
+
+the {{{C-x C-e}}} key combination for evaluating things
+
+using {{{setq}}} to set a global variable
+
+using {{{let}}} to set a local variable
+
+using {{{defun}}} to define a function
+
+using {{{kill-emacs}}} to quit the current Emacs
