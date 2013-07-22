@@ -17,7 +17,10 @@
     ("youtube" . creole-youtube-handler)))
 
 (defun tapas-resolver (name)
-  name)
+  (let ((rooted (concat tapas-docroot name ".creole")))
+    (if (file-exists-p rooted)
+        rooted
+        name)))
 
 (defmacro with-creole-embeds (embed-list &rest code)
   (declare (indent 1))
@@ -108,6 +111,16 @@ an HR element.  The HR elements are retained."
         do
         (tapas-creole-page httpcon targetfile))))
 
+(defun tapas-series (httpcon)
+  "Index server."
+  (noflet ((elnode-http-mapping (httpcon which)
+             (concat (funcall this-fn httpcon 1) ".creole")))
+    (elnode-docroot-for tapas-indexroot
+        with targetfile
+        on httpcon
+        do
+        (tapas-creole-page httpcon targetfile))))
+
 ;; Might do for the index page
 (defun tapas-main (httpcon)
   (let ((page (concat tapas-indexroot "main.creole")))
@@ -127,6 +140,7 @@ an HR element.  The HR elements are retained."
       . ,(elnode-make-send-file
           (concat tapas-root "../assets/olive.ico")))
      ("^[^/]+//-/\\(.*\\)" . ,tapas-assets-server)
+     ("^[^/]+//series/\\(.*\\)" . tapas-series)
      ("^[^/]+//episode/\\(.*\\)" . tapas-episode))))
 
 (defun tapas-start ()

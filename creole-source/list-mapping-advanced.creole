@@ -10,7 +10,7 @@ M-x package-install dash
 
 === functions ===
 
-| -map     | basic mapping                  |
-| --map    | anaphoric map                  |
-| --filter | a map that's actually a filter |
+| {{{-map}}}     | basic mapping                  |
+| {{{--map}}}    | anaphoric map                  |
+| {{{--filter}}} | a map that's actually a filter |
 

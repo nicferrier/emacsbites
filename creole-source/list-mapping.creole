@@ -7,7 +7,7 @@ introducing {{{lambda}}} and using the map functions.
 
 === functions ===
 
-| mapcar    | basic emacs lisp mapping                           |
-| mapc      | map without a result                               |
-| mapconcat | map and automatically make a string of the results |
+| {{{mapcar}}}    | basic emacs lisp mapping                           |
+| {{{mapc}}}      | map without a result                               |
+| {{{mapconcat}}} | map and automatically make a string of the results |
 
