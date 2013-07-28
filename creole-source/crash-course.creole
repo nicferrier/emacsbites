@@ -1,3 +1,4 @@
+{{youtube:VDtrwR7tZGM}}
 emacs is a complex program and there's a lot you can do with it, this
 is a crash course into the basics of Lisp programming.
 
@@ -14,4 +15,4 @@ using {{{let}}} to set a local variable
 
 using {{{defun}}} to define a function
 
-using {{{kill-emacs}}} to quit the current Emacs
+using the {{{C-x C-c}}} key combination to quit the current Emacs

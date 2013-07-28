@@ -26,9 +26,17 @@ h2 {
 
 table {
     margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: #EDE5D6 !important;
+}
+
+table thead th {
+    border-bottom: thin solid #444444;
 }
 
 table * td {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px !important;
 }

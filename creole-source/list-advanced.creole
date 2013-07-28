@@ -4,7 +4,7 @@ this is fundamental to Lisp.
 
 == what's in the movie? ==
 
-what a //cons// is; how to make them with {{{cons}} and access them
+what a //cons// is; how to make them with {{{cons}}} and access them
 with {{{car}}} and {{{cdr}}} and how to use //literal syntax// for
 conses.
 

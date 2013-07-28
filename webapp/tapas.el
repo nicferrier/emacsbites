@@ -12,8 +12,41 @@
   (file-name-as-directory
    (expand-file-name (concat tapas-root "../indexes"))))
 
+(defvar tapas-summary-handler-path nil
+  "If set this is the ")
+
+(defun tapas-summary-handler (m scheme path)
+  "Embed handler to handle \"summary:file\" embeds."
+  ;; This is not a very good summary handler
+  ;;
+  ;; what is SHOULD do is to take the elements up to and including the
+  ;; first para and then throw everything else away.
+  (let* ((file-path (if (functionp creole-link-resolver-fn)
+                        (funcall creole-link-resolver-fn path)
+                        ;; Else just the path
+                        path)))
+    (with-temp-buffer
+      (insert-file-contents-literally file-path)
+      (let* ((creole-buffer (current-buffer))
+             ;; We could cache the creole-structure?
+             (struct
+              (creole-structure (creole-tokenize creole-buffer)))
+             ;; cdar expects a para... need to change that
+             (summary (cdar struct))
+             (decorated (format "%s [[%s|... read more]]"
+                                summary
+                                path)))
+        (with-temp-buffer
+          (insert
+           ;; FIXME - make a defvar summary-handler-path which will be used for this if present
+           (let ((creole-link-resolver-fn
+                  (lambda (path)
+                    (format "/episode/%s" path))))
+             (creole-block-parse decorated)))
+          (buffer-string))))))
+
 (defconst tapas-embed-handlers
-  '(("include" . creole-include-handler)
+  '(("include" . tapas-summary-handler)
     ("youtube" . creole-youtube-handler)))
 
 (defun tapas-resolver (name)
@@ -49,19 +82,22 @@ an HR element.  The HR elements are retained."
               "%s-row"
               (replace-regexp-in-string
                "[ ?]" "-" (cdr heading)))))
-    (let ((tx
-           (loop for e in struct
-              append
-                (if (eq (car e) 'heading2)
-                    (list
-                     `(plugin-html
-                       . ,(format
-                           "</div></div></div>
-<div class=\"section\" id=\"%s\">
+    (let* ((even t)
+           (tx
+            (loop for e in struct
+               do (setq even (not even))
+               append
+                 (if (eq (car e) 'heading2)
+                     (list
+                      `(plugin-html
+                        . ,(s-format
+                            "</div></div></div>
+<div class=\"section ${even}\" id=\"${section}\">
 <div class=\"container\">
-<div class=\"row\">" (heading->section-id e))) e)
-                    ;; Else just...
-                    (list e)))))
+<div class=\"row\">" 'aget `(("even" . ,(if even "even" ""))
+                             ("section" . ,(heading->section-id e))))) e)
+                     ;; Else just...
+                     (list e)))))
       (append
        '((plugin-html
           . "<div class=\"section\" id=\"sec-top\">
