@@ -1,0 +1,10 @@
+= intros and outros =
+
+some episodes with orthogonal subjects; how to organize emacs
+instances, shell tricks to use, etc...
+
+== crash course ==
+{{include:crash-course|getting in, doing stuff, getting out}}
+
+== scratch Emacs ==
+{{include:scratch-emacs|advanced start up lessons}}
