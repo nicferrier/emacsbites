@@ -1,11 +1,11 @@
 {{youtube:VDtrwR7tZGM}}
 emacs is a complex program and there's a lot you can do with it, this
-is a crash course into the basics of Lisp programming.
+is a crash course into the very basic, basics of Lisp programming.
 
 == what's in the movie? ==
 
-starting a sandboxed Emacs that won't interfere with another using the
-//realpath// program.
+starting a sandboxed Emacs that won't interfere with another using
+the //HOME// environment variable.
 
 the {{{C-x C-e}}} key combination for evaluating things
 
