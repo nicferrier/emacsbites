@@ -1,4 +1,4 @@
-{{youtube:e5Jid4Lanv8|list basics}}
+{{youtube:_gJlqfP8sho|list basics}}
 lists are fundamental to any Lisp because of their simplicity and
 generality; they are the defining feature of the lisp programming
 style
