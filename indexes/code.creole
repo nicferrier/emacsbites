@@ -1,0 +1,24 @@
+= writing Lisp code =
+
+a series of episodes explaining how Lisp code works.
+
+== defining functions ==
+{{include:lisp-functions|make lisp functions}}
+
+== more complex function parameters ==
+{{include:lisp-cl-params|make lisp functions with keyword params and other things}}
+
+== defining variables ==
+{{include:lisp-variables|how to define variables and constants}}
+
+== making emacs packages ==
+{{include:lisp-packages|making packages with dependancies on other packages}}
+
+== what is a macro? ==
+{{include:macro-basics|the basics of macros}}
+
+== define your own macros ==
+{{include:macro-defining|how to use defmacro}}
+
+== error handling ==
+{{include:errors|how to use condition-case}}

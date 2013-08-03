@@ -1,0 +1,21 @@
+= Emacs facilities and functions =
+
+a series of episodes explaining how Emacs can be used to automatically
+process text or run processes.
+
+== buffer basics ==
+{{include:buffer-basics|what is a buffer?}}
+
+== starting processes ==
+{{include:start-process|starting processes from Emacs}}
+
+== filter functions ==
+{{include:filter-functions|filtering processes asynchronously}}
+
+== sentinel functions ==
+{{include:sentinel-functions|handling asynchronous events from processes}}
+
+== debugging ==
+{{include:edebug|how to source debug Emacs-Lisp in Emacs}}
+
+
