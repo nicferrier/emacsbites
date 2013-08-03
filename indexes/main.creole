@@ -1,6 +1,6 @@
 = emacs tapas =
 
-{{youtube:WcUwCsAhWMk|[[/episode/list-basics|basic list manipulation]]}}
+{{youtube:VDtrwR7tZGM|[[/episode/crash-course|crash course into Emacs]]}}
 
 learn Emacs and Lisp with a simple, bite sized series of screencasts.
 
