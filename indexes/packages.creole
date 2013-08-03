@@ -1,0 +1,7 @@
+== packaging ==
+
+screencasts that touch on packaging.
+
+== scratch emacs ==
+{{include:scractch-emacs|using a scratch emacs to get a clean package environment}}
+

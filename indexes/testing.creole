@@ -1,0 +1,6 @@
+= testing =
+
+screencasts that touch on tests or testing.
+
+== scratch emacs ==
+{{include:scratch-emacs|how to setup a clean emacs environment for testing}}
