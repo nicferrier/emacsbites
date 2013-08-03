@@ -1,0 +1,7 @@
+there is a list templating language built into lisp that is very
+useful, we can construct lists semi-statically.
+
+== what's in the movie? ==
+
+//making lists// with the {{{`()}}} form and de-quoting inside the list
+with the {{{,}}} and splicing in with the {{{,@}}}.

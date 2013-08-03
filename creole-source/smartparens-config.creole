@@ -1,0 +1,25 @@
+smartparens is a very powerful list editing package and it can be
+conigured up the wazoo.
+
+== what's in the movie? ==
+
+Nic shows his personal smartparens config and adds it to his
+default.el file so that he can replicate the same config over and over
+again.
+
+=== customizations ===
+
+{{{
+(sp-override-key-bindings 
+  '(("C-<right>")                     ;; make standard ctrl-arrow behaviour work
+    ("C-<left>")                      ;; and this
+    ("C-(" . sp-forward-slurp-sexp)   ;; move slurp
+    ("C-)" . sp-forward-barf-sexp)))  ;; move barf
+
+(sp-base-key-bindings 'sp)            ;; Fuco's defaults, not paredits
+
+(emacs-lisp-mode-hook                 ;; add an initialization to emacs-lisp-mode
+  (lambda ()                         
+    (smartparens-mode)                ;; to turn on smartparens
+    (require 'smartparens-config)))   ;; with some basic config
+}}}
