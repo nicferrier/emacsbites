@@ -11,6 +11,12 @@ a series of episodes explaining how Lisp code works.
 == defining variables ==
 {{include:lisp-variables|how to define variables and constants}}
 
+== scratch emacs ==
+{{include:scractch-emacs|using a scratch emacs to get a clean package environment}}
+
+== testing with ert ==
+{{include:ert|unit-testing in emacs}}
+
 == making emacs packages ==
 {{include:lisp-packages|making packages with dependancies on other packages}}
 
