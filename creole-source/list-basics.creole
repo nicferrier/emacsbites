@@ -10,10 +10,12 @@ quoted {{{'(lists)}}} and {{{`(backquoted lists)}}}
 how list literals are great for structure
 
 {{{
-`(("nic"     . (("job" "hacker")
-                ("packages" ["elnode" "elpakit" "creole"])))
-  ("magnars" . (("job" "movie star")
-                ("packages" ["dash" "s.el" "mc"]))))
+`("nic"
+  ("job" "hacker")
+  ("packages" "elnode" "elpakit" "creole")
+  "magnars"
+  ("job" "movie star")
+  ("packages" "dash" "s.el" "mc"))
 }}}
 
 using
@@ -25,11 +27,24 @@ M-x package-install smartparens
 [[http://github.com/Fuco1/smartparens|smartparens]], or the older
 {{{paredit}}} package are great for moving around lists.
 
+=== customizations ===
+
+| {{{sp-base-key-bindings}}} | because smartparens comes uninitialized |
+
+=== keys ===
+
+| {{{M-C-right}}} | forward to end of sexp  |
+| {{{M-C-left}}}  | backward to end of sexp |
+| {{{M-k}}}       | kill the current sexp   |
+| {{{M-C-n}}}     | next sexp               |
+| {{{M-C-p}}}     | previous sexp           |
+
 === some functions ===
 
-| {{{length}}} | how long is a list                                           |
-| {{{elt}}}    | get the element at an index.                                 |
-| {{{car}}}    | the head of the list.                                        |
-| {{{cdr}}}    | the rest of the list.                                        |
-| {{{cadr}}}   | composition of {{{car}}} and {{{cdr}}} and the arc anecdote. |
+| {{{length}}}     | how long is a list                                           |
+| {{{eldoc-mode}}} | show documentation for functions under cursor                |
+| {{{elt}}}        | get the element at an index.                                 |
+| {{{car}}}        | the head of the list.                                        |
+| {{{cdr}}}        | the rest of the list.                                        |
+| {{{cadr}}}       | composition of {{{car}}} and {{{cdr}}} and the arc anecdote. |
 
