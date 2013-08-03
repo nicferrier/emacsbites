@@ -2,7 +2,7 @@
 
 (require 'elnode)
 
-(elnode-app tapas-root creole cl)
+(elnode-app tapas-root creole noflet cl)
 
 (defconst tapas-docroot
   (file-name-as-directory
@@ -118,7 +118,9 @@ an HR element.  The HR elements are retained."
   "Index server."
   (noflet ((elnode-http-mapping (httpcon which)
              (concat (funcall this-fn httpcon 1) ".creole")))
-    (let ((creole-summary-resolver
+    (let ((creole-youtube-handler-width 266)
+          (creole-youtube-handler-height 200)
+          (creole-summary-resolver
            (lambda (path)
              (format "/episode/%s" path))))
       (elnode-docroot-for tapas-indexroot
