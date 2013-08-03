@@ -1,11 +1,12 @@
+{{youtube:e5Jid4Lanv8|list basics}}
 lists are fundamental to any Lisp because of their simplicity and
 generality; they are the defining feature of the lisp programming
-style and responsible for the name - //LISt Processing//
+style
 
 == what's in the movie? ==
 
 //making lists// with the {{{list}}} form or with //list literals// -
-quoted {{{'(lists)}}} and {{{`(backquoted lists)}}} 
+quoted {{{'(lists)}}}.
 
 how list literals are great for structure
 
@@ -48,3 +49,9 @@ M-x package-install smartparens
 | {{{cdr}}}        | the rest of the list.                                        |
 | {{{cadr}}}       | composition of {{{car}}} and {{{cdr}}} and the arc anecdote. |
 
+=== extra notes ===
+
+Lisp is called Lisp because {{{LISt Processing}}}
+
+{{{car}}} and {{{cdr}}} were address registers on
+the [[http://en.wikipedia.org/wiki/IBM_704|IBM 704 computer]].
