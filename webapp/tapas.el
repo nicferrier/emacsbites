@@ -39,11 +39,12 @@
                      (cons 'para (creole-block-parse (cdr e)))
                      e)))))
 
-(defun tapas-creole->bootstrap (struct)
-  "Transform STRUCT, a creole structure, into something bootstrapable.
+(defvar tapas/struct-class :main
+  "Dynamic variable for passing the class of page.
 
-HTML DIV elements are hacked into the structure wherever we find
-an HR element.  The HR elements are retained."
+The value should be one of `:episode', `:series' or `:main'.")
+
+(defun tapas/creole-struct (struct)
   (noflet ((heading->section-id (heading)
              (format
               "%s-row"
@@ -65,18 +66,29 @@ an HR element.  The HR elements are retained."
                              ("section" . ,(heading->section-id e))))) e)
                      ;; Else just...
                      (list e)))))
-      (append
-       '((plugin-html
-          . "<div class=\"section\" id=\"sec-top\">
+      tx)))
+
+(defun tapas-creole->bootstrap (struct)
+  "Transform STRUCT, a creole structure, into something bootstrapable.
+
+HTML DIV elements are hacked into the structure wherever we find
+an HR element.  The HR elements are retained."
+  (let ((tx (tapas/creole-struct struct)))
+    (append
+     `((plugin-html
+        . ,(concat
+            (unless (eq tapas/struct-class :main)
+              "<a id=\"homelink\" href=\"/\">emacs tapas</a>")
+            "<div class=\"section\" id=\"sec-top\">
 <div class=\"container\">
-<div class=\"row\">"))
-       tx
-       '((plugin-html . "</div></div></div><footer>")
-         (ul
-          "(C) 2013 Nic Ferrier"
-          "[[/terms|terms]]"
-          "[[/contact|contact]]")
-         (plugin-html . "</footer>"))))))
+<div class=\"row\">")))
+     tx
+     '((plugin-html . "</div></div></div><footer>")
+       (ul
+        "(C) 2013 Nic Ferrier"
+        "[[/terms|terms]]"
+        "[[/contact|contact]]")
+       (plugin-html . "</footer>")))))
 
 (defun tapas-creole (creole-file destination &optional css)
   "Abstract the creole rendering to HTML a little."
@@ -108,17 +120,19 @@ an HR element.  The HR elements are retained."
   "Episode server."
   (noflet ((elnode-http-mapping (httpcon which)
              (concat (funcall this-fn httpcon 1) ".creole")))
-    (elnode-docroot-for tapas-docroot
-        with targetfile
-        on httpcon
-        do
-        (tapas-creole-page httpcon targetfile))))
+    (let ((tapas/struct-class :series))
+      (elnode-docroot-for tapas-docroot
+          with targetfile
+          on httpcon
+          do
+          (tapas-creole-page httpcon targetfile)))))
 
 (defun tapas-series (httpcon)
   "Index server."
   (noflet ((elnode-http-mapping (httpcon which)
              (concat (funcall this-fn httpcon 1) ".creole")))
-    (let ((creole-youtube-handler-width 266)
+    (let ((tapas/struct-class :series)
+          (creole-youtube-handler-width 266)
           (creole-youtube-handler-height 200)
           (creole-summary-resolver
            (lambda (path)

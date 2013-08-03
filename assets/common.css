@@ -42,9 +42,17 @@ li {
     padding-bottom: .3em;
 }
 
+#homelink {
+    float: right;
+    margin-right: 20px;
+    color: DarkOrange;
+    font-size: 14pt;
+}
+
 #sec-top {
     background-color: #004400;
     color: OldLace;
+    clear: left !important;
 }
 
 #sec-top * p {
