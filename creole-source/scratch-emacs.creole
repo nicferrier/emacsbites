@@ -1,0 +1,45 @@
+{{youtube:Q-bmvMWqWmY}}
+start a scratch Emacs session, with no packages installed, so you can
+test installation of your own packages or package deployment.
+
+== what's in the movie? ==
+
+using HOME to start emacs in it's own HOME directory
+
+{{{
+mkdir emacstest
+HOME=$(realpath emacstest) emacs
+}}}
+
+the //realpath// program means you don't need to specify the whole path.
+
+use a {{{default.el}}} file for adding a //little// customization
+
+{{{
+HOME=$(realpath emacstest) emacs -l default.el
+}}}
+
+and tieing it all together with a shell function:
+
+{{{
+function fake-emacs {
+    [ "$1" != "" ] || { echo "make-emacs <emacsd directory>" ; return 1 ; }
+    emacsd=$1
+    shift
+    [ -d $emacsd ] || mkdir $emacsd
+    HOME=$(realpath $emacsd) emacs -nw $*
+}
+}}}
+
+=== an example default.el file ===
+
+{{{
+;;; default things for new emacs instances
+(package-refresh-contents)
+(customize-set-variable
+ 'package-archives
+ (add-to-list 'package-archives (cons "marmalade" "http://marmalade-repo.org/packages/")))
+(customize-set-variable 'show-paren-mode t)
+(customize-save-customized)
+(package-refresh-contents)
+}}}
