@@ -56,3 +56,8 @@ Lisp is called Lisp because {{{LISt Processing}}}
 
 {{{car}}} and {{{cdr}}} were address registers on
 the [[http://en.wikipedia.org/wiki/IBM_704|IBM 704 computer]].
+
+
+=== see also ===
+
+{{include:emacs-help|more about eldoc}}

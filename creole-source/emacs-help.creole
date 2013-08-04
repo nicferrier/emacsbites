@@ -1,0 +1,24 @@
+emacs really is self documenting and functions and variables are all
+documented quite well; here's how to use it.
+
+== what's in the movie? ==
+
+using the help browser to lookup functions and variables, using
+apropos to find functions/variables, using eldoc, using autocomplete
+for documentation.
+
+{{{
+M-x package-install auto-complete
+}}}
+
+=== keys ===
+| {{{C-h f}}} | lookup function documentation |
+| {{{C-h v}}} | lookup variable documentaion  |
+| {{{TAB}}}   | auto-complete                 |
+
+=== some functions ===
+
+| {{{apropos}}} | find things |
+
+=== customizations ===
+| {{{eldoc-mode}}} | for emacs-lisp |
