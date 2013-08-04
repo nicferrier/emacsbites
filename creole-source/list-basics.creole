@@ -36,7 +36,8 @@ M-x package-install smartparens
 
 | {{{M-C-right}}} | forward to end of sexp  |
 | {{{M-C-left}}}  | backward to end of sexp |
-| {{{M-k}}}       | kill the current sexp   |
+| {{{M-C-k}}}     | kill the current sexp   |
+| {{{C-y}}}       | yank back               |
 | {{{M-C-n}}}     | next sexp               |
 | {{{M-C-p}}}     | previous sexp           |
 
