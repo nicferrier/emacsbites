@@ -40,6 +40,12 @@
         rooted
         name)))
 
+(defun tapas-get-file (filename)
+  "Stop worrying about `revert-without-query'."
+  (with-current-buffer (generate-new-buffer)
+    (insert-file-contents filename)
+    (current-buffer)))
+
 (defmacro with-creole-embeds (embed-list &rest code)
   (declare (indent 1))
   `(let ((creole-embed-handlers ,embed-list))
@@ -51,7 +57,7 @@
     (let ((struct
            (creole-structure
             (creole-tokenize
-             (find-file-noselect index-file)))))
+             (tapas-get-file index-file)))))
       (loop for e in struct
          collect (if (eq 'para (car e))
                      (cons 'para (creole-block-parse (cdr e)))
