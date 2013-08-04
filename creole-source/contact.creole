@@ -1,0 +1,19 @@
+= contact =
+
+if you want to make a suggestion, say how much this stinks, send
+begging letters or giving letters... this is how to get in touch.
+
+
+== twitter ==
+
+just reach out to [[http://twitter.com/nicferrier|@nicferrier]]
+
+
+== email ==
+
+send spam to {{{the-editor AT emacstapas.com}}}
+
+
+== pigeons ==
+
+are not welcome. I'm sorry. we don't have the facilities.
