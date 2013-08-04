@@ -16,6 +16,12 @@
   '(("include" . creole-summary-handler)
     ("youtube" . creole-youtube-handler)))
 
+(defconst tapas-licence-badge
+  "<div class=\"cc\">
+<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB\"><img alt=\"Creative Commons Licence\" style=\"border-width:0\" src=\"http://i.creativecommons.org/l/by-sa/3.0/88x31.png\" /></img></a><span xmlns:dct=\"http://purl.org/dc/terms/\" property=\"dct:title\">emacs tapas</span> by <a xmlns:cc=\"http://creativecommons.org/ns#\" href=\"http://nic.ferrier.me.uk\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">nic ferier</a> is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB\">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+</div>"
+  "The Creative Commons plugin code.")
+
 (defun tapas-resolver (name)
   (let ((rooted (concat tapas-docroot name ".creole")))
     (if (file-exists-p rooted)
@@ -39,10 +45,11 @@
                      (cons 'para (creole-block-parse (cdr e)))
                      e)))))
 
-(defvar tapas/struct-class :main
+(defvar tapas/struct-class :other
   "Dynamic variable for passing the class of page.
 
-The value should be one of `:episode', `:series' or `:main'.")
+The value should be one of `:other', `:episode', `:series' or
+`:main'.")
 
 (defun tapas/creole-struct (struct)
   (noflet ((heading->section-id (heading)
@@ -77,17 +84,18 @@ an HR element.  The HR elements are retained."
     (append
      `((plugin-html
         . ,(concat
-            (unless (eq tapas/struct-class :main)
+            (when (member tapas/struct-class '(:episode :series))
               "<a id=\"homelink\" href=\"/\">emacs tapas</a>")
             "<div class=\"section\" id=\"sec-top\">
 <div class=\"container\">
 <div class=\"row\">")))
      tx
-     '((plugin-html . "</div></div></div><footer>")
+     `((plugin-html . "</div></div></div><footer>")
        (ul
         "(C) 2013 Nic Ferrier"
         "[[/terms|terms]]"
         "[[/contact|contact]]")
+       (plugin-html . ,tapas-licence-badge)
        (plugin-html . "</footer>")))))
 
 (defun tapas-creole (creole-file destination &optional css)
@@ -145,8 +153,15 @@ an HR element.  The HR elements are retained."
 
 ;; Might do for the index page
 (defun tapas-main (httpcon)
-  (let ((page (concat tapas-indexroot "main.creole")))
+  (let ((tapas/struct-class :main)
+        (page (concat tapas-indexroot "main.creole")))
     (tapas-creole-page httpcon page :main)))
+
+(defun tapas/make-creole (filename)
+  (lambda (httpcon)
+    (let ((tapas/struct-class :other)
+          (page filename))
+      (tapas-creole-page httpcon page :main))))
 
 (defconst tapas-assets-server
   (elnode-webserver-handler-maker
@@ -162,6 +177,10 @@ an HR element.  The HR elements are retained."
       . ,(elnode-make-send-file
           (concat tapas-root "../assets/olive.ico")))
      ("^[^/]+//-/\\(.*\\)" . ,tapas-assets-server)
+     ("^[^/]+//terms$" . ,(tapas/make-creole
+                           (concat tapas-docroot "terms.creole")))
+     ("^[^/]+//contact$" . ,(tapas/make-creole
+                             (concat tapas-docroot "contact.creole")))
      ("^[^/]+//series/\\(.*\\)" . tapas-series)
      ("^[^/]+//episode/\\(.*\\)" . tapas-episode))))
 
