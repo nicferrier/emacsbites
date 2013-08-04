@@ -84,6 +84,6 @@ I record the videos into YouTube so you could also view them there.
 | vectors                | error handling     | edebug             |
 
 I'm not doing this for free though, I do ask you to tip me a small
-amount every week with [[http://gittip.com|gittip]]. Choose whatever
+amount every week with [[http://gittip.com/nicferrier|gittip]]. Choose whatever
 you want to pay. If you enjoy the videos and find them useful this is
 a good way to make sure I can continue to make them.
