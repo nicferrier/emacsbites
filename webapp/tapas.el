@@ -1,4 +1,4 @@
-;;; tapas.el -- a webapp presenting the emacslisp tapas
+;;; tapas.el -- a webapp presenting the emacslisp tapas -*- lexical-binding: t -*-
 
 (require 'elnode)
 
