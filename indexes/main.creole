@@ -6,7 +6,7 @@ learn Emacs and Lisp with a simple, bite sized series of screencasts.
 
 [[#what-is-it--row|what?]][[#why-tapas--row|why?]] [[#how-much--row|how?]] 
 
-[[#so-far|so far...]]
+[[/series/done-so-far|let me see what's done so far...]]
 
 == what is it? ==
 
@@ -68,28 +68,15 @@ other compatible device.
 
 I record the videos into YouTube so you could also view them there.
 
-| [[/series/data|about data]]          | [[/series/code|about lisp]] | [[/series/emacs|about emacs]]|
-|--------------------------------------+--------------------+--------------------|
-| [[/episode/list-basics|list basics]] | defining functions | buffer basics  |
-| list advanced                        | defining variables | start-process      |
-| mapping                              | packaging          | filter functions   |
-| hashtables                           | macros             | sentinels          |
-| vectors                              | error handling     | edebug             |
+| [[/series/data         | about data]]       | [[/series/code     | about lisp]]  | [[/series/emacs | about emacs]] |
+|------------------------+--------------------+--------------------+---------------+-----------------+---------------|
+| [[/episode/list-basics | list basics]]      | defining functions | buffer basics |                 |               |
+| list advanced          | defining variables | start-process      |               |                 |               |
+| mapping                | packaging          | filter functions   |               |                 |               |
+| hashtables             | macros             | sentinels          |               |                 |               |
+| vectors                | error handling     | edebug             |               |                 |               |
 
 I'm not doing this for free though, I do ask you to tip me a small
 amount every week with [[http://gittip.com|gittip]]. Choose whatever
 you want to pay. If you enjoy the videos and find them useful this is
 a good way to make sure I can continue to make them.
-
-== so far ==
-
-here's the list of the videos I've recorded so far:
-
-==== the crash course ====
-{{include:crash-course|a crash course into Emacs Lisp programming}}
-
-==== list basics ====
-{{include:list-basics|the very basics of lists, which underpin Lisp}}
-
-==== scratch emacs ====
-{{include:scratch-emacs|starting scratch emacs instances for testing etc...}}

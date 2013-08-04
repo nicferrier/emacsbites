@@ -1,5 +1,10 @@
 = videos recorded so far =
 
+when I've got enough videos to have a proper browse around I'll
+probably remove this index, but for now it tells you how much video
+content is here. many other episodes do have a sketch of what they
+will contain.
+
 == the crash course ==
 {{include:crash-course|a crash course into Emacs Lisp programming}}
 
