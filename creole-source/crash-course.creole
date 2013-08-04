@@ -1,4 +1,4 @@
-{{youtube:VDtrwR7tZGM}}
+{{youtube:VDtrwR7tZGM|emacs lisp crash course}}
 emacs is a complex program and there's a lot you can do with it, this
 is a crash course into the very basic, basics of Lisp programming.
 

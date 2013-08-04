@@ -4,7 +4,9 @@
 
 learn Emacs and Lisp with a simple, bite sized series of screencasts.
 
-[[#what-is-it--row|what?]] [[#why-tapas--row|why?]] [[#how-much--row|how?]]
+[[#what-is-it--row|what?]][[#why-tapas--row|why?]] [[#how-much--row|how?]] 
+
+[[#so-far--row|so far...]]
 
 == what is it? ==
 
@@ -79,3 +81,15 @@ amount every week with [[http://gittip.com|gittip]]. Choose whatever
 you want to pay. If you enjoy the videos and find them useful this is
 a good way to make sure I can continue to make them.
 
+== so far ==
+
+here's the list of the videos I've recorded so far:
+
+==== the crash course ====
+{{include:crash-course|a crash course into Emacs Lisp programming}}
+
+==== list basics ====
+{{include:list-basics|the very basics of lists, which underpin Lisp}}
+
+==== scratch emacs ====
+{{include:scratch-emacs|starting scratch emacs instances for testing etc...}}

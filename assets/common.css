@@ -69,6 +69,10 @@ li {
     font-size: 36pt;
 }
 
+h4 {
+    clear: both;
+}
+
 pre {
     margin: 1em 2em 2em 1em !important;
     font-size: 12pt !important;

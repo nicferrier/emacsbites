@@ -1,4 +1,4 @@
-{{youtube:Q-bmvMWqWmY}}
+{{youtube:Q-bmvMWqWmY|starting scratch emacs}}
 start a scratch Emacs session, with no packages installed, so you can
 test installation of your own packages or package deployment.
 
