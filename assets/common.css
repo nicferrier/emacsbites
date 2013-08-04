@@ -6,10 +6,11 @@ body {
 
 footer {
     background-color: Black;
-    height: 50px;
-    padding-top: 10px;
+    height: 90px;
+    padding-top: 30px;
     margin: 0 !important;
 }
+
 
 footer ul {
     width: 960px;
@@ -23,6 +24,11 @@ footer ul li {
     padding-left: 60px;
 }
 
+footer div.cc {
+    width: 960px;
+    margin: 0 auto !important;
+    padding-top: 20px;
+}
 
 h1 {
     padding-bottom: 1em;
@@ -35,6 +41,10 @@ h1 {
     font-size: 16pt;
     padding-top: 30px;
     clear: both;
+    line-height: 1.5;
+}
+
+ul li {
     line-height: 1.5;
 }
 
