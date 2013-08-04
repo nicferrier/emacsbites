@@ -6,7 +6,7 @@ learn Emacs and Lisp with a simple, bite sized series of screencasts.
 
 [[#what-is-it--row|what?]][[#why-tapas--row|why?]] [[#how-much--row|how?]] 
 
-[[#so-far--row|so far...]]
+[[#so-far|so far...]]
 
 == what is it? ==
 

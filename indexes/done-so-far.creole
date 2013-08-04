@@ -1,0 +1,10 @@
+= videos recorded so far =
+
+== the crash course ==
+{{include:crash-course|a crash course into Emacs Lisp programming}}
+
+== list basics ==
+{{include:list-basics|the very basics of lists, which underpin Lisp}}
+
+== scratch emacs ==
+{{include:scratch-emacs|starting scratch emacs instances for testing etc...}}
