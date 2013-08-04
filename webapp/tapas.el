@@ -22,6 +22,18 @@
 </div>"
   "The Creative Commons plugin code.")
 
+(defconst tapas-ga "<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-24502836-7', 'emacstapas.com');
+  ga('send', 'pageview');
+
+</script>"
+  "The tapas GA script.")
+
 (defun tapas-resolver (name)
   (let ((rooted (concat tapas-docroot name ".creole")))
     (if (file-exists-p rooted)
@@ -96,6 +108,7 @@ an HR element.  The HR elements are retained."
         "[[/terms|terms]]"
         "[[/contact|contact]]")
        (plugin-html . ,tapas-licence-badge)
+       (plugin-html . ,tapas-ga)
        (plugin-html . "</footer>")))))
 
 (defun tapas-creole (creole-file destination &optional css)
