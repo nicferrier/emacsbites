@@ -4,9 +4,16 @@
 
 learn Emacs and Lisp with a simple, bite sized series of screencasts.
 
-[[#what-is-it--row|what?]][[#why-tapas--row|why?]] [[#how-much--row|how?]] 
+[[#what-is-it--row|what?]] [[#why-tapas--row|why?]] [[#how-much--row|how?]] 
 
-[[/series/done-so-far|let me see what's done so far...]]
+[[/series/done-so-far|what's done so far?]]
+
+<<html
+<div id="maintweet">
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://emacstapas.com" data-via="emacstapas" data-size="large" data-hashtags="emacs">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script', 'twitter-wjs');</script>
+</div>
+html>>
 
 == what is it? ==
 
@@ -68,13 +75,13 @@ other compatible device.
 
 I record the videos into YouTube so you could also view them there.
 
-| [[/series/data|about data]]          | [[/series/code|about lisp]] | [[/series/emacs|about emacs]]|
-|--------------------------------------+--------------------+--------------------|
-| [[/episode/list-basics|list basics]] | defining functions | buffer basics  |
-| list advanced                        | defining variables | start-process      |
-| mapping                              | packaging          | filter functions   |
-| hashtables                           | macros             | sentinels          |
-| vectors                              | error handling     | edebug             |
+| [[/series/data         | about data]]       | [[/series/code     | about lisp]]  | [[/series/emacs | about emacs]] |
+|------------------------+--------------------+--------------------+---------------+-----------------+---------------|
+| [[/episode/list-basics | list basics]]      | defining functions | buffer basics |                 |               |
+| list advanced          | defining variables | start-process      |               |                 |               |
+| mapping                | packaging          | filter functions   |               |                 |               |
+| hashtables             | macros             | sentinels          |               |                 |               |
+| vectors                | error handling     | edebug             |               |                 |               |
 
 I'm not doing this for free though, I do ask you to tip me a small
 amount every week with [[http://gittip.com|gittip]]. Choose whatever

@@ -59,6 +59,14 @@ li {
     font-size: 14pt;
 }
 
+iframe.twitter-share-button {
+    float: right;
+}
+
+div#maintweet iframe.twitter-share-button {
+    float: none !important;
+}
+
 #sec-top {
     background-color: #004400;
     color: OldLace;

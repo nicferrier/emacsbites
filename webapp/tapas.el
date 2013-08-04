@@ -34,6 +34,19 @@
 </script>"
   "The tapas GA script.")
 
+(defconst tapas-tweet
+  "<a href=\"https://twitter.com/share\"
+class=\"twitter-share-button\"
+data-url=\"http://emacstapas.com\"
+data-via=\"emacstapas\"
+data-size=\"large\" data-hashtags=\"emacs\">Tweet</a>
+<script>
+// <!--
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+// -->
+</script>"
+  "The text of the tweet button.")
+
 (defun tapas-resolver (name)
   (let ((rooted (concat tapas-docroot name ".creole")))
     (if (file-exists-p rooted)
@@ -103,7 +116,9 @@ an HR element.  The HR elements are retained."
      `((plugin-html
         . ,(concat
             (when (member tapas/struct-class '(:episode :series))
-              "<a id=\"homelink\" href=\"/\">emacs tapas</a>")
+              (concat
+               "<a id=\"homelink\" href=\"/\">emacs tapas</a>"
+               tapas-tweet))
             "<div class=\"section\" id=\"sec-top\">
 <div class=\"container\">
 <div class=\"row\">")))
