@@ -126,8 +126,8 @@ an HR element.  The HR elements are retained."
      `((plugin-html . "</div></div></div><footer>")
        (ul
         "(C) 2013 Nic Ferrier"
-        "[[/terms|terms]]"
-        "[[/contact|contact]]")
+        "[[http://www.emacstapas.com/terms|terms]]"
+        "[[http://www.emacstapas.com/contact|contact]]")
        (plugin-html . ,tapas-licence-badge)
        (plugin-html . ,tapas-ga)
        (plugin-html . "</footer>")))))
