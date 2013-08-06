@@ -1,9 +1,6 @@
 = videos recorded so far =
 
-when I've got enough videos to have a proper browse around I'll
-probably remove this index, but for now it tells you how much video
-content is here. many other episodes do have a sketch of what they
-will contain.
+Here's the list of videos recorded so far, roughly in time order.
 
 == buffer basics ==
 {{include:buffer-basics|the basics of working with buffers from Lisp}}
