@@ -9,6 +9,8 @@ again.
 
 === customizations ===
 
+We can add all this to our {{{default.el}}}
+
 {{{
 (sp-override-key-bindings 
   '(("C-<right>")                     ;; make standard ctrl-arrow behaviour work
@@ -23,3 +25,8 @@ again.
     (smartparens-mode)                ;; to turn on smartparens
     (require 'smartparens-config)))   ;; with some basic config
 }}}
+
+=== see also ===
+
+{{include:scratch-emacs|about default.el files for standard customization}}
+
