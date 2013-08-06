@@ -2,6 +2,9 @@
 
 Here's the list of videos recorded so far, roughly in time order.
 
+== evaluation ==
+{{include:evaluation|very basic intro to evaluating and running code in Lisp}}
+
 == buffer basics ==
 {{include:buffer-basics|the basics of working with buffers from Lisp}}
 

@@ -1,17 +1,21 @@
 {{youtube:WcUwCsAhWMk|how to get the results of expressions in emacs}}
-= evaluating things =
+evaluation is how you get things done in lisp, this is a basic
+introduction to getting results.
+
+== what's in the movie? ==
 
 watch the movie now and learn how to get lisp working for you
 
 
-== keys ==
-----
-| key                         | description                                               |
-|-----------------------------+-----------------------------------------------------------|
-| C-x C-e                     | evaluate an expression                                    |
-| M-:                         | evaluate an expression in the mini-buffer with completion |
-| C-u M-:                     | do that and then insert the result in a buffer            |
-| M-x ielm                    | open the IELM REPL                                        |
-| M-x eshell                  | open an eshell                                            |
-| M-x package-install lexbind | get the lexbind package                                   |
-| M-x lexbind-lexscratch      | make a lexical scratch for evaling things                 |
+=== keys ===
+
+| {{{C-x C-e}}} | evaluate an expression                                    |
+| {{{M-:}}}     | evaluate an expression in the mini-buffer with completion |
+| {{{C-u M-:}}} | do that and then insert the result in a buffer            |
+
+=== commands ===
+
+| {{{M-x ielm}}}                    | open the IELM REPL                        |
+| {{{M-x eshell}}}                  | open an eshell                            |
+| {{{M-x package-install lexbind}}} | get the lexbind package                   |
+| {{{M-x lexbind-lexscratch}}}      | make a lexical scratch for evaling things |
