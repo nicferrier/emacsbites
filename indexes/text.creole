@@ -1,3 +1,8 @@
 = working with text =
 
+== buffer basics ==
 {{include:buffer-basics|the basics of using buffers for lots of text}}
+
+== buffers and files ==
+{{include:buffers-and-files|saving buffers from files, getting files into buffers}}
+

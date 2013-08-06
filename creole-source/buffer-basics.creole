@@ -1,1 +1,33 @@
-to be done...
+{{youtube:qajLhM0aseM|buffer basics}}
+buffers are what makes Emacs Emacs, they store text in a variety of
+interesting ways and can be saved or read from files.
+
+== what's in the movie? ==
+
+what a buffer is, how to make and kill buffers, when a buffer is alive
+or dead, how to insert data in buffers, where the point is and how to
+switch a buffer to the current window.
+
+=== keys ===
+
+| {{{C-x b}}}   | switch to a buffer |
+| {{{C-x C-b}}} | buffer listing     |
+
+=== some functions and macros ===
+
+| {{{get-buffer}}}          | get a buffer                     |
+| {{{get-buffer-create}}}   | get or make a buffer             |
+| {{{kill-buffer}}}         | killl a buffer                   |
+| {{{bufferp}}}             | is a thing a buffer?             |
+| {{{buffer-live-p}}}       | is a thing a live buffer?        |
+| {{{generate-new-buffer}}} | make a new buffer                |
+| {{{with-current-buffer}}} | how to switch to a buffer        |
+| {{{insert}}}              | put a string into a buffer       |
+| {{{goto-char}}}           | move //point//                   |
+| {{{point-min}}}           | the first position in the buffer |
+| {{{point-max}}}           | the final position in the buffer |
+| {{{switch-to-buffer}}}    | display a buffer                 |
+
+=== some useful tools ===
+
+| {{{M-x ibuffer}}} | a better buffer list |

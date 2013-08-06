@@ -5,11 +5,14 @@ probably remove this index, but for now it tells you how much video
 content is here. many other episodes do have a sketch of what they
 will contain.
 
-== the crash course ==
-{{include:crash-course|a crash course into Emacs Lisp programming}}
+== buffer basics ==
+{{include:buffer-basics|the basics of working with buffers from Lisp}}
 
 == list basics ==
 {{include:list-basics|the very basics of lists, which underpin Lisp}}
 
 == scratch emacs ==
 {{include:scratch-emacs|starting scratch emacs instances for testing etc...}}
+
+== the crash course ==
+{{include:crash-course|a crash course into Emacs Lisp programming}}
