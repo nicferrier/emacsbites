@@ -4,7 +4,7 @@
 
 learn Emacs and Lisp with a simple, bite sized series of screencasts.
 
-[[#what-is-it--row|what?]] [[#why-tapas--row|why?]] [[#how-much--row|how?]] 
+[[#what-is-it--row|what?]] [[#why-tapas--row|why?]] [[#how-much--row|how much?]] 
 
 [[/series/done-so-far|what's done so far?]]
 
@@ -22,28 +22,17 @@ the Emacs editor and the EmacsLisp programming language. It's also a
 really good way to learn the basics of programming Lisp, the skills
 transfer easily to programming in CommonLisp, Clojure or Scheme.
 
-Here's some example Lisp:
+What are the screencasts on? here's are some of the //series// we'll
+have and some episodes in each. The ones you can link to have at least
+a first cut.
 
-{{{
-(let ((tapas 
-        (take-n (random 5) 
-                '(calamari potatas-bravas fritta tomate-salate
-                  scallops croquettas gambas))))
-  (do ((dish (car tapas)))
-    (with-current-buffer table-menu
-      (insert (format "dish: %s\n" dish)))
-    (setq tapas (cdr tapas))))
-}}}
-
-We have screencasts on:
-
-* basic list manipulation
-* emacs buffer handling
-* lambda
-* managing processes
-
-If you have an idea for something that you think should be covered
-please drop me a line.
+| [[/series/data| about data]]       | [[/series/code     | about lisp]]             | [[/series/emacs | about emacs]] |
+|------------------------+--------------------+--------------------|
+| [[/episode/list-basics | list basics]]      | defining functions | [[/episode/buffer-basics | buffer basics]] |
+| list advanced          | defining variables | start-process      |
+| mapping                | packaging          | filter functions   |
+| hashtables             | macros             | sentinels          |
+| vectors                | error handling     | edebug             |
 
 == why tapas? ==
 {{/-/tapas-picture.jpg|Jessica Spengler's tapas picture - http://www.flickr.com/photos/wordridden/3370372292/}}
@@ -67,23 +56,9 @@ help you learn Lisp as a second language and understand how to
 write your own customizations for Emacs so you can be even more
 productive in whatever language you use.
 
-== how? ==
+== how much? ==
 
-emacs-tapas is just a series of short videos with summary web pages,
-you can view them on your computer, on your video enabled phone or any
-other compatible device.
-
-I record the videos into YouTube so you could also view them there.
-
-| [[/series/data|about data]]  | [[/series/code|about lisp]]  | [[/series/emacs|about emacs]] |
-|------------------------+--------------------+--------------------|
-| [[/episode/list-basics|list basics]]      | defining functions | [[/episode/buffer-basics|buffer basics]] |
-| list advanced          | defining variables | start-process      |
-| mapping                | packaging          | filter functions   |
-| hashtables             | macros             | sentinels          |
-| vectors                | error handling     | edebug             |
-
-I'm not doing this for free though, I do ask you to tip me a small
+I'd rather not do this for free. I ask you to tip me a small
 amount every week with [[http://gittip.com/nicferrier|gittip]]. Choose whatever
 you want to pay. If you enjoy the videos and find them useful this is
 a good way to make sure I can continue to make them.

@@ -15,6 +15,10 @@
     color: DarkOrange !important;
 }
 
+p a[href="/series/done-so-far"] {
+    font-size: 26pt;
+}
+
 img {
     float: right;
     margin-left: 30px;
