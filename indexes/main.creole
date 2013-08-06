@@ -4,7 +4,8 @@
 
 learn Emacs and Lisp with a simple, bite sized series of screencasts.
 
-[[#what-is-it--row|what?]] [[#why-tapas--row|why?]] [[#how-much--row|how much?]] 
+[[#what-is-it--row|what?]] [[#why-tapas--row|why?]]\
+[[#how-much--row|how much?]] 
 
 [[/series/done-so-far|what's done so far?]]
 
