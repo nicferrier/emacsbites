@@ -77,7 +77,7 @@ I record the videos into YouTube so you could also view them there.
 
 | [[/series/data|about data]]  | [[/series/code|about lisp]]  | [[/series/emacs|about emacs]] |
 |------------------------+--------------------+--------------------|
-| [[/episode/list-basics|list basics]]      | defining functions | buffer basics |
+| [[/episode/list-basics|list basics]]      | defining functions | [[/episode/buffer-basics|buffer basics]] |
 | list advanced          | defining variables | start-process      |
 | mapping                | packaging          | filter functions   |
 | hashtables             | macros             | sentinels          |
