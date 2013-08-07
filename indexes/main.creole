@@ -1,24 +1,24 @@
-= emacs tapas =
+= emacs bites =
 
 {{youtube:VDtrwR7tZGM|[[/episode/crash-course|crash course into Emacs]]}}
 
 learn Emacs and Lisp with a simple, bite sized series of screencasts.
 
-[[#what-is-it--row|what?]] [[#why-tapas--row|why?]]\
+[[#what-is-it--row|what?]] [[#why-bites--row|why?]]\
 [[#how-much--row|how much?]] 
 
 [[/series/done-so-far|what's done so far?]]
 
 <<html
 <div id="maintweet">
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://emacstapas.com" data-via="emacstapas" data-size="large" data-hashtags="emacs">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://emacsbites.com" data-via="emacsbites" data-size="large" data-hashtags="emacs">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script', 'twitter-wjs');</script>
 </div>
 html>>
 
 == what is it? ==
 
-Emacs Tapas is a collection of short screen casts to help you learn
+emacsbites  is a collection of short screen casts to help you learn
 the Emacs editor and the EmacsLisp programming language. It's also a
 really good way to learn the basics of programming Lisp, the skills
 transfer easily to programming in CommonLisp, Clojure or Scheme.
@@ -35,24 +35,35 @@ a first cut.
 | hashtables             | macros             | sentinels          |
 | vectors                | error handling     | edebug             |
 
-== why tapas? ==
-{{/-/tapas-picture.jpg|Jessica Spengler's tapas picture - http://www.flickr.com/photos/wordridden/3370372292/}}
+== why learn emacs and lisp? ==
 
-I totally stole the allusion to the Spanish dish Tapas
-from [[http://devblog.avdi.org/|Avdi Grimm]] who built the most
-excellent [[http://rubytapas.com]]
+<<html
+<div class="prewrapper">
+html>>
 
-The idea is that it's short and digestible and you can dip in and
-out. 
+{{{
+(let (collected)
+  (with-current-buffer 
+       (find-file-noselect "~/text")
+    (while 
+         (re-search-forward "thing[a-z]* \\([^ ]+\\)" nil t)
+      (add-to-list 'collected (match-string 0))
+      (replace-match "wotsit"))
+    collected))
+}}}
 
-=== but why learn to program in Lisp? ===
+//using elisp to replace words and return the replaced words//
+
+<<html
+</div>
+html>>
 
 If you're fresh to programming then learning EmacsLisp is a good way
 to get started, you basically only need to install Emacs to try it out
 and the concepts you'll learn here help you understand Ruby or
 Javascript and even Java and C.
 
-If you already program in some other language then Emacs Tapas will
+If you already program in some other language then //emacs bites// will
 help you learn Lisp as a second language and understand how to
 write your own customizations for Emacs so you can be even more
 productive in whatever language you use.

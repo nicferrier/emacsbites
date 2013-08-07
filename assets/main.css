@@ -2,16 +2,16 @@
     padding-bottom: 150px;
 }
 
-#why-tapas--row {
+#why-learn-emacs-and-lisp--row {
     background-color: #444444; /*#004400;*/
     color: OldLace;
 }
 
-#why-tapas--row * h2 {
+#why-learn-emacs-and-lisp--row * h2 {
     color: DarkOrange !important;
 }
 
-#why-tapas--row * h3 {
+#why-learn-emacs-and-lisp--row * h3 {
     color: DarkOrange !important;
 }
 
@@ -19,9 +19,19 @@ p a[href="/series/done-so-far"] {
     font-size: 26pt;
 }
 
-img {
+.prewrapper {
     float: right;
     margin-left: 30px;
+    margin-right: -50px;
+}
+
+.prewrapper p {
+    text-align: right;
+    font-size: 14pt;
+}
+
+img {
+    float: right;
 }
 
 h2 {

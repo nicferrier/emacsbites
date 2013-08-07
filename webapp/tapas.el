@@ -18,27 +18,28 @@
 
 (defconst tapas-licence-badge
   "<div class=\"cc\">
-<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB\"><img alt=\"Creative Commons Licence\" style=\"border-width:0\" src=\"http://i.creativecommons.org/l/by-sa/3.0/88x31.png\" /></img></a><span xmlns:dct=\"http://purl.org/dc/terms/\" property=\"dct:title\">emacs tapas</span> by <a xmlns:cc=\"http://creativecommons.org/ns#\" href=\"http://nic.ferrier.me.uk\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">nic ferrier</a> is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB\">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB\"><img alt=\"Creative Commons Licence\" style=\"border-width:0\" src=\"http://i.creativecommons.org/l/by-sa/3.0/88x31.png\" /></img></a><span xmlns:dct=\"http://purl.org/dc/terms/\" property=\"dct:title\">emacsbites</span> by <a xmlns:cc=\"http://creativecommons.org/ns#\" href=\"http://nic.ferrier.me.uk\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">nic ferrier</a> is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB\">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
 </div>"
   "The Creative Commons plugin code.")
 
 (defconst tapas-ga "<script>
+// <!--
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-24502836-7', 'emacstapas.com');
+  ga('create', 'UA-24502836-8', 'emacsbites.com');
   ga('send', 'pageview');
 
+// -->
 </script>"
-  "The tapas GA script.")
+  "The bites GA script.")
 
 (defconst tapas-tweet
   "<a href=\"https://twitter.com/share\"
 class=\"twitter-share-button\"
-data-url=\"http://emacstapas.com\"
-data-via=\"emacstapas\"
+data-url=\"http://emacsbites.com\"
+data-via=\"emacsbites\"
 data-size=\"large\" data-hashtags=\"emacs\">Tweet</a>
 <script>
 // <!--
@@ -117,7 +118,7 @@ an HR element.  The HR elements are retained."
         . ,(concat
             (when (member tapas/struct-class '(:episode :series))
               (concat
-               "<a id=\"homelink\" href=\"/\">emacs tapas</a>"
+               "<a id=\"homelink\" href=\"/\">emacs bites</a>"
                tapas-tweet))
             "<div class=\"section\" id=\"sec-top\">
 <div class=\"container\">
@@ -126,8 +127,8 @@ an HR element.  The HR elements are retained."
      `((plugin-html . "</div></div></div><footer>")
        (ul
         "(C) 2013 Nic Ferrier"
-        "[[http://www.emacstapas.com/terms|terms]]"
-        "[[http://www.emacstapas.com/contact|contact]]")
+        "[[http://emacsbites.com/terms|terms]]"
+        "[[http://emacsbites.com/contact|contact]]")
        (plugin-html . ,tapas-licence-badge)
        (plugin-html . ,tapas-ga)
        (plugin-html . "</footer>")))))
