@@ -1,5 +1,7 @@
-= The Emacs Tapas =
+= Emacs Bites =
 
 A series of podcasts by me about Emacs and Lisp.
 
-This is the elnode website.
+This is the content and elnode webapp.
+
+Renamed from "tapas".
