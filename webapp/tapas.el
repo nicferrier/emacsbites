@@ -1,28 +1,28 @@
-;;; tapas.el -- a webapp presenting the emacslisp tapas -*- lexical-binding: t -*-
+;;; bites.el -- a webapp presenting the emacslisp bites -*- lexical-binding: t -*-
 
 (require 'elnode)
 
-(elnode-app tapas-root creole noflet cl)
+(elnode-app bites-root creole noflet cl)
 
-(defconst tapas-docroot
+(defconst bites-docroot
   (file-name-as-directory
-   (expand-file-name (concat tapas-root "../creole-source"))))
+   (expand-file-name (concat bites-root "../creole-source"))))
 
-(defconst tapas-indexroot
+(defconst bites-indexroot
   (file-name-as-directory
-   (expand-file-name (concat tapas-root "../indexes"))))
+   (expand-file-name (concat bites-root "../indexes"))))
 
-(defconst tapas-embed-handlers
+(defconst bites-embed-handlers
   '(("include" . creole-summary-handler)
     ("youtube" . creole-youtube-handler)))
 
-(defconst tapas-licence-badge
+(defconst bites-licence-badge
   "<div class=\"cc\">
 <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB\"><img alt=\"Creative Commons Licence\" style=\"border-width:0\" src=\"http://i.creativecommons.org/l/by-sa/3.0/88x31.png\" /></img></a><span xmlns:dct=\"http://purl.org/dc/terms/\" property=\"dct:title\">emacsbites</span> by <a xmlns:cc=\"http://creativecommons.org/ns#\" href=\"http://nic.ferrier.me.uk\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">nic ferrier</a> is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB\">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
 </div>"
   "The Creative Commons plugin code.")
 
-(defconst tapas-ga "<script>
+(defconst bites-ga "<script>
 // <!--
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -35,7 +35,7 @@
 </script>"
   "The bites GA script.")
 
-(defconst tapas-tweet
+(defconst bites-tweet
   "<a href=\"https://twitter.com/share\"
 class=\"twitter-share-button\"
 data-url=\"http://emacsbites.com\"
@@ -48,13 +48,13 @@ data-size=\"large\" data-hashtags=\"emacs\">Tweet</a>
 </script>"
   "The text of the tweet button.")
 
-(defun tapas-resolver (name)
-  (let ((rooted (concat tapas-docroot name ".creole")))
+(defun bites-resolver (name)
+  (let ((rooted (concat bites-docroot name ".creole")))
     (if (file-exists-p rooted)
         rooted
         name)))
 
-(defun tapas-get-file (filename)
+(defun bites-get-file (filename)
   "Stop worrying about `revert-without-query'."
   (with-current-buffer (generate-new-buffer)
     (insert-file-contents filename)
@@ -63,27 +63,27 @@ data-size=\"large\" data-hashtags=\"emacs\">Tweet</a>
 (defmacro with-creole-embeds (embed-list &rest code)
   (declare (indent 1))
   `(let ((creole-embed-handlers ,embed-list))
-     (let ((creole-link-resolver-fn 'tapas-resolver))
+     (let ((creole-link-resolver-fn 'bites-resolver))
        ,@code)))
 
-(defun tapas-make-page (index-file)
-  (with-creole-embeds tapas-embed-handlers
+(defun bites-make-page (index-file)
+  (with-creole-embeds bites-embed-handlers
     (let ((struct
            (creole-structure
             (creole-tokenize
-             (tapas-get-file index-file)))))
+             (bites-get-file index-file)))))
       (loop for e in struct
          collect (if (eq 'para (car e))
                      (cons 'para (creole-block-parse (cdr e)))
                      e)))))
 
-(defvar tapas/struct-class :other
+(defvar bites/struct-class :other
   "Dynamic variable for passing the class of page.
 
 The value should be one of `:other', `:episode', `:series' or
 `:main'.")
 
-(defun tapas/creole-struct (struct)
+(defun bites/creole-struct (struct)
   (noflet ((heading->section-id (heading)
              (format
               "%s-row"
@@ -107,19 +107,19 @@ The value should be one of `:other', `:episode', `:series' or
                      (list e)))))
       tx)))
 
-(defun tapas-creole->bootstrap (struct)
+(defun bites-creole->bootstrap (struct)
   "Transform STRUCT, a creole structure, into something bootstrapable.
 
 HTML DIV elements are hacked into the structure wherever we find
 an HR element.  The HR elements are retained."
-  (let ((tx (tapas/creole-struct struct)))
+  (let ((tx (bites/creole-struct struct)))
     (append
      `((plugin-html
         . ,(concat
-            (when (member tapas/struct-class '(:episode :series))
+            (when (member bites/struct-class '(:episode :series))
               (concat
                "<a id=\"homelink\" href=\"/\">emacs bites</a>"
-               tapas-tweet))
+               bites-tweet))
             "<div class=\"section\" id=\"sec-top\">
 <div class=\"container\">
 <div class=\"row\">")))
@@ -129,20 +129,20 @@ an HR element.  The HR elements are retained."
         "(C) 2013 Nic Ferrier"
         "[[http://www.emacsbites.com/terms|terms]]"
         "[[http://www.emacsbites.com/contact|contact]]")
-       (plugin-html . ,tapas-licence-badge)
-       (plugin-html . ,tapas-ga)
+       (plugin-html . ,bites-licence-badge)
+       (plugin-html . ,bites-ga)
        (plugin-html . "</footer>")))))
 
-(defun tapas-creole (creole-file destination &optional css)
+(defun bites-creole (creole-file destination &optional css)
   "Abstract the creole rendering to HTML a little."
   (interactive
    (list
-    (concat tapas-indexroot "main.creole")
+    (concat bites-indexroot "main.creole")
     (get-buffer-create "*testcreole*")))
   (creole-wiki
    creole-file
    :destination destination
-   :structure-transform-fn 'tapas-creole->bootstrap
+   :structure-transform-fn 'bites-creole->bootstrap
    :doctype 'html5
    :css (list "/-/bootstrap/css/bootstrap.css"
               "/-/common.css"
@@ -153,74 +153,74 @@ an HR element.  The HR elements are retained."
   (when (called-interactively-p 'interactive)
     (switch-to-buffer destination)))
 
-(defun tapas-creole-page (httpcon filename &optional css)
-  (with-creole-embeds tapas-embed-handlers
+(defun bites-creole-page (httpcon filename &optional css)
+  (with-creole-embeds bites-embed-handlers
     (elnode-http-start httpcon 200 '("Content-type" . "text/html"))
     (with-stdout-to-elnode httpcon
-        (tapas-creole filename t css))))
+        (bites-creole filename t css))))
 
-(defun tapas-episode (httpcon)
+(defun bites-episode (httpcon)
   "Episode server."
   (noflet ((elnode-http-mapping (httpcon which)
              (concat (funcall this-fn httpcon 1) ".creole")))
-    (let ((tapas/struct-class :series))
-      (elnode-docroot-for tapas-docroot
+    (let ((bites/struct-class :series))
+      (elnode-docroot-for bites-docroot
           with targetfile
           on httpcon
           do
-          (tapas-creole-page httpcon targetfile)))))
+          (bites-creole-page httpcon targetfile)))))
 
-(defun tapas-series (httpcon)
+(defun bites-series (httpcon)
   "Index server."
   (noflet ((elnode-http-mapping (httpcon which)
              (concat (funcall this-fn httpcon 1) ".creole")))
-    (let ((tapas/struct-class :series)
+    (let ((bites/struct-class :series)
           (creole-youtube-handler-width 266)
           (creole-youtube-handler-height 200)
           (creole-summary-resolver
            (lambda (path)
              (format "/episode/%s" path))))
-      (elnode-docroot-for tapas-indexroot
+      (elnode-docroot-for bites-indexroot
           with targetfile
           on httpcon
           do
-          (tapas-creole-page httpcon targetfile)))))
+          (bites-creole-page httpcon targetfile)))))
 
 ;; Might do for the index page
-(defun tapas-main (httpcon)
-  (let ((tapas/struct-class :main)
-        (page (concat tapas-indexroot "main.creole")))
-    (tapas-creole-page httpcon page :main)))
+(defun bites-main (httpcon)
+  (let ((bites/struct-class :main)
+        (page (concat bites-indexroot "main.creole")))
+    (bites-creole-page httpcon page :main)))
 
-(defun tapas/make-creole (filename)
+(defun bites/make-creole (filename)
   (lambda (httpcon)
-    (let ((tapas/struct-class :other)
+    (let ((bites/struct-class :other)
           (page filename))
-      (tapas-creole-page httpcon page :main))))
+      (bites-creole-page httpcon page :main))))
 
-(defconst tapas-assets-server
+(defconst bites-assets-server
   (elnode-webserver-handler-maker
    (file-name-as-directory
-    (expand-file-name (concat tapas-root "../assets"))))
+    (expand-file-name (concat bites-root "../assets"))))
   "Webserver for static assets.")
 
-(defun tapas-router (httpcon)
+(defun bites-router (httpcon)
   (elnode-hostpath-dispatcher
    httpcon
-   `(("^[^/]+//$" . tapas-main)
+   `(("^[^/]+//$" . bites-main)
      ("^[^/]+//favicon.ico"
       . ,(elnode-make-send-file
-          (concat tapas-root "../assets/olive.ico")))
-     ("^[^/]+//-/\\(.*\\)" . ,tapas-assets-server)
-     ("^[^/]+//terms$" . ,(tapas/make-creole
-                           (concat tapas-docroot "terms.creole")))
-     ("^[^/]+//contact$" . ,(tapas/make-creole
-                             (concat tapas-docroot "contact.creole")))
-     ("^[^/]+//series/\\(.*\\)" . tapas-series)
-     ("^[^/]+//episode/\\(.*\\)" . tapas-episode))))
+          (concat bites-root "../assets/olive.ico")))
+     ("^[^/]+//-/\\(.*\\)" . ,bites-assets-server)
+     ("^[^/]+//terms$" . ,(bites/make-creole
+                           (concat bites-docroot "terms.creole")))
+     ("^[^/]+//contact$" . ,(bites/make-creole
+                             (concat bites-docroot "contact.creole")))
+     ("^[^/]+//series/\\(.*\\)" . bites-series)
+     ("^[^/]+//episode/\\(.*\\)" . bites-episode))))
 
-(defun tapas-start ()
+(defun bites-start ()
   (interactive)
-  (elnode-start 'tapas-router :port 8006))
+  (elnode-start 'bites-router :port 8006))
 
-;;; tapas.el ends here
+;;; bites.el ends here
