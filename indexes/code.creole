@@ -5,6 +5,9 @@ a series of episodes explaining how Lisp code works.
 == crash course ==
 {{include:crash-course|the very basics of lisp coding in Emacs}}
 
+== iteration basics ==
+{{include:iteration-basics|basically repeating yourself}}
+
 == defining functions ==
 {{include:lisp-functions|make lisp functions}}
 
