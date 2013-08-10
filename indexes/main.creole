@@ -1,6 +1,6 @@
 = emacs bites =
 
-{{youtube:VDtrwR7tZGM|[[/episode/crash-course|crash course into Emacs]]}}
+{{youtube:51mesucWxaM|[[/episode/crash-course|crash course into Emacs]]}}
 
 learn Emacs and Lisp with a simple, bite sized series of screencasts.
 
