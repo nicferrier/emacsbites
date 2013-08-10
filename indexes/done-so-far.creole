@@ -2,6 +2,9 @@
 
 Here's the list of videos recorded so far, roughly in time order.
 
+== iteration basics ==
+{{include:iteration-basics|basic intro to how to repeat in Lisp}}
+
 == evaluation ==
 {{include:evaluation|very basic intro to evaluating and running code in Lisp}}
 

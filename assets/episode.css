@@ -10,3 +10,7 @@ img {
 h2 {
     border-bottom: 3px solid #004400;
 }
+
+.clear {
+    clear: both;
+}

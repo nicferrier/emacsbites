@@ -1,0 +1,35 @@
+{{youtube:m9vgRWM94e4|iteration basics}}
+doing things repeatedly is key to programming so we introduce the
+basics of repeating ourselves.
+
+== what's in the video? ==
+
+the very basics of iteration, {{{while}}} and {{{dolist}}} which is a
+Lisp like {{{for}}} loop.
+
+=== some forms ===
+
+| {{{while}}}  | do a thing repeatedly until some //test// is true}}         |
+| {{{dolist}}} | iterate over a list of things doing something with each one |
+
+=== some functions ===
+
+| {{{princ}}}       | print something to the message area or a buffer            |
+| {{{add-to-list}}} | add an item to a list                                      |
+| {{{<}}}           | less than test, eg: {{{(< x 5)}}} -- is //x// less than 5? |
+
+=== some keys ===
+
+| {{{C-x 3}}} | vertically split the current //frame// into 2 //windows// |
+| {{{C-x o}}} | switch bewteen //windows//                                |
+
+
+=== see also ===
+
+{{include:list-basics|about smartparens and basic list movement}}
+
+<<html
+<div class="clear"></div>
+html>>
+
+{{include:buffer-basics|about with-current-buffer and get-current-buffer}}
