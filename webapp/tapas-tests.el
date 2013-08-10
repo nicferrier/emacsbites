@@ -1,9 +1,9 @@
-;;; tests for tapas.el
+;;; tests for bites.el
 
-(ert-deftest tapas-creole->bootstrap ()
+(ert-deftest bites-creole->bootstrap ()
   (should
    (equal
-    (tapas-creole->bootstrap
+    (bites-creole->bootstrap
      '((h1 . "text")
        (hr)
        (h2 . "more text")
@@ -19,4 +19,4 @@
       (plugin-html . "</div>")))))
 
 
-;;; tapas-tests.el ends here
+;;; bites-tests.el ends here
