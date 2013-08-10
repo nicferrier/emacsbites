@@ -6,7 +6,7 @@ is a crash course into the very basic, basics of Lisp programming.
 
 starting a sandboxed Emacs that won't interfere with another using
 the //HOME// environment variable, setting global variables and local
-variables, making functions and because Emacs is a Lisp-2 they don't
+variables, making functions and because Emacs is a //Lisp-2// they don't
 conflict.
 
 === some keys ===
