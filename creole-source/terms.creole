@@ -1,14 +1,14 @@
 
 <<html
-<a href="https://github.com/you">
+<a href="https://github.com/nicferrier/emacsbites">
 <img style="position: absolute; top: 0; right: 0; border: 0;"
      src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
      alt="Fork me on GitHub"></img></a>
 html>>
 
-= Emacs Tapas - terms of use =
+= Emacs Bites - terms of use =
 
-The Emacs Tapas website and videos are licenced under the
+The Emacs Bites website and videos are licenced under the
 [[http://creativecommons.org/licenses/by-sa/3.0/|Creative Commons, attribution, share alike licence]].
 
 

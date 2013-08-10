@@ -11,7 +11,7 @@ just reach out to [[http://twitter.com/nicferrier|@nicferrier]]
 
 == email ==
 
-send spam to {{{the-editor AT emacstapas.com}}}
+send spam to {{{the-editor AT emacsbites.com}}}
 
 
 == pigeons ==
