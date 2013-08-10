@@ -37,6 +37,10 @@ a first cut.
 
 == why learn emacs and lisp? ==
 
+//"Lisp is worth learning for the profound enlightenment experience
+you will have when you finally get it; that experience will make you a
+better programmer for the rest of your days." - Eric Raymond//
+
 <<html
 <div class="prewrapper">
 html>>
@@ -57,10 +61,6 @@ html>>
 <<html
 </div>
 html>>
-
-//"Lisp is worth learning for the profound enlightenment experience
-you will have when you finally get it; that experience will make you a
-better programmer for the rest of your days." - Eric Raymond//
 
 If you're fresh to programming then learning EmacsLisp is a good way
 to get started, you basically only need to install Emacs to try it out
