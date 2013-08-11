@@ -1,0 +1,27 @@
+there are lots of resources for learning Emacs and Lisp, here are a
+few.
+
+== Learn Emacs with Screencasts ==
+
+[[http://emacsmovies.org/|EmacsMovies has good screencasts]] for
+complete beginners to Emacs, very comprehensive.
+
+[[http://www.youtube.com/user/rpdillon/videos?query=hack+emacs|Hack Emacs]]
+is a good series of stuff about Emacs from Richard Dillon.
+
+[[https://www.youtube.com/playlist?list=PLxj9UAX4Em-IiOfvF2Qs742LxEK4owSkr|Jekeor has a good, developing series on learning Emacs for programming]],
+[[https://www.youtube.com/watch?v=MRYzPWnk2mE&list=PLxj9UAX4Em-IiOfvF2Qs742LxEK4owSkr&index=1|here's the first]]
+
+[[http://www.emacswiki.org/emacs/EmacsScreencasts|EmacsWiki has lots and lots of other screencasts]]
+for learning Emacs and related things.
+
+== Learn Emacs with tutorials ==
+
+[[http://www.braveclojure.com/3-basic-emacs/|this tutorial is Clojure centered]]
+if that's what lights your candle.
+
+== Learn Emacs Lisp ==
+
+[[http://bzg.fr/learn-emacs-lisp-in-15-minutes.html|Bastien Guerry came up with this]]
+tutorial which is an excellent way to learn EmacsLisp if you're an
+experienced programmer.
