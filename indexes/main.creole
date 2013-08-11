@@ -16,6 +16,7 @@ learn Emacs and Lisp with a simple, bite sized series of screencasts.
 </div>
 html>>
 
+
 == what is it? ==
 
 emacsbites  is a collection of short screen casts to help you learn
@@ -27,13 +28,13 @@ What are the screencasts on? here's are some of the //series// we'll
 have and some episodes in each. The ones you can link to have at least
 a first cut.
 
-| [[/series/data| about data]]       | [[/series/code     | about lisp]]             | [[/series/emacs | about emacs]] |
-|------------------------+--------------------+--------------------|
-| [[/episode/list-basics | list basics]]      | defining functions | [[/episode/buffer-basics | buffer basics]] |
-| list advanced          | defining variables | start-process      |
-| mapping                | packaging          | filter functions   |
-| hashtables             | macros             | sentinels          |
-| vectors                | error handling     | edebug             |
+| [[/series/data         | about data]]       | [[/series/code     | about lisp]]             | [[/series/emacs | about emacs]] |
+|------------------------+--------------------+--------------------+--------------------------+-----------------+---------------|
+| [[/episode/list-basics | list basics]]      | defining functions | [[/episode/buffer-basics | buffer basics]] |               |
+| list advanced          | defining variables | start-process      |                          |                 |               |
+| mapping                | packaging          | filter functions   |                          |                 |               |
+| hashtables             | macros             | sentinels          |                          |                 |               |
+| vectors                | error handling     | edebug             |                          |                 |               |
 
 == why learn emacs and lisp? ==
 
@@ -71,6 +72,13 @@ If you already program in some other language then //emacs bites// will
 help you learn Lisp as a second language and understand how to
 write your own customizations for Emacs so you can be even more
 productive in whatever language you use.
+
+=== what if I'm a complete beginner? ==
+
+Well, try it. But if you want to go elsewhere I've started a small
+list of useful resources.
+
+[[/episode/learn-elsewhere|Other tutorials and screencasts on Emacs]]
 
 == how much? ==
 

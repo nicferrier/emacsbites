@@ -155,7 +155,7 @@ an HR element.  The HR elements are retained."
 
 (defun bites-creole-page (httpcon filename &optional css)
   (with-creole-embeds bites-embed-handlers
-    (elnode-http-start httpcon 200 '("Content-type" . "text/html"))
+    (elnode-http-start httpcon 200 '("Content-type" . "text/html; charset=utf-8"))
     (with-stdout-to-elnode httpcon
         (bites-creole filename t css))))
 
