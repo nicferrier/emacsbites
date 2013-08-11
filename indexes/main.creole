@@ -73,7 +73,7 @@ help you learn Lisp as a second language and understand how to
 write your own customizations for Emacs so you can be even more
 productive in whatever language you use.
 
-=== what if I'm a complete beginner? ==
+=== what if I'm a complete beginner? ===
 
 Well, try it. But if you want to go elsewhere I've started a small
 list of useful resources.
