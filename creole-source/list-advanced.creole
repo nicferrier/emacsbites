@@ -1,3 +1,4 @@
+{{youtube:gmrz92Q47no|list advanced - how cons works}}
 lists are actually a subtle and thought provoking data structure
 composed of cons cells, learn about their basic composition and how
 this is fundamental to Lisp.
