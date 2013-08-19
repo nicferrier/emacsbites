@@ -1,0 +1,33 @@
+testing code is good, Lisp is very easy to test without any additional
+support but Emacs provides the {{{ert}}} package anyway to help out
+with testing.
+
+== what's in the video? ==
+
+unit testing with Lisp, making a function and testing it, writing a
+formal {{{ert}}} test, using the {{{should}}} assertion, running tests
+and using the {{{*ert*}}} buffer for managing tests.
+
+some examples of {{{should}}}
+
+{{{
+(should t)
+(should (equal 10 10))
+(should (> 7 10))
+}}}
+
+=== commands and functions ===
+
+| {{{M-x ert}}}     | run a unit test suite using a regex          |
+| {{{ert-deftest}}} | define a test, like a function               |
+| {{{should}}}      | make an assertion that an expression is true |
+
+=== keys in the ert buffer ===
+
+| R | re-run all the tests for the regex you used to select them |
+| r | re-run the test you're on                                  |
+| l | list the assertions that this test ran                     |
+| D | delete the selected test                                   |
+| T | show the timings for the tests                             |
+| h | describe the selected test                                 |
+
