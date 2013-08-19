@@ -2,6 +2,9 @@
 
 Here's the list of videos recorded so far, roughly in time order.
 
+== list advanced - cons ==
+{{include:list-advanced|how lists are made, what cons is, non-mutation alteration}}
+
 == iteration basics ==
 {{include:iteration-basics|basic intro to how to repeat in Lisp}}
 

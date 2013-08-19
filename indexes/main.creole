@@ -31,7 +31,7 @@ a first cut.
 | [[/series/data         | about data]]       | [[/series/code     | about lisp]]             | [[/series/emacs | about emacs]] |
 |------------------------+--------------------+--------------------+--------------------------+-----------------+---------------|
 | [[/episode/list-basics | list basics]]      | defining functions | [[/episode/buffer-basics | buffer basics]] |               |
-| list advanced          | defining variables | start-process      |                          |                 |               |
+| [[/episode/list-advanced|list advanced]]    | defining variables | start-process      |                          |                 |               |
 | mapping                | packaging          | filter functions   |                          |                 |               |
 | hashtables             | macros             | sentinels          |                          |                 |               |
 | vectors                | error handling     | edebug             |                          |                 |               |
