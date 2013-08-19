@@ -21,7 +21,7 @@ a series of episodes explaining how Lisp code works.
 {{include:scratch-emacs|using a scratch emacs to get a clean package environment}}
 
 == testing with ert ==
-{{include:ert|unit-testing in emacs}}
+{{include:ert-basics|unit-testing in emacs}}
 
 == making emacs packages ==
 {{include:lisp-packages|making packages with dependancies on other packages}}

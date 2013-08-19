@@ -2,5 +2,8 @@
 
 screencasts that touch on tests or testing.
 
+== basic ert ==
+{{include:ert-basics|the basics of using the ERT package for unit testing}}
+
 == scratch emacs ==
 {{include:scratch-emacs|how to setup a clean emacs environment for testing}}
