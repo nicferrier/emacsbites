@@ -1,1 +1,24 @@
-to be done...
+functions are how we write down in small parts what our program will
+do, functions take values and return values, but they may also have
+side effects, such as changing a buffer or deleting a file.
+
+== what's in the movie? ==
+
+//making a function// with {{{defun}}}
+
+//evaluating a function// and then calling it.
+
+how functions and values can use the same names without affecting each
+other.
+
+adding //function documentation// to a function
+
+looking up //function documentation// with {{{C-h f}}}
+
+{{{eldoc-mode}}} to get basic function documentation lookup
+
+
+
+=== keys ===
+
+| {{{C-h f}}}} | look up function documentation |

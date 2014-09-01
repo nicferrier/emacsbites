@@ -221,6 +221,8 @@ an HR element.  The HR elements are retained."
 
 (defun bites-start ()
   (interactive)
-  (elnode-start 'bites-router :port 8006))
+  (elnode-start 'bites-router :port 8006 :host "0.0.0.0"))
+
+(bites-start)
 
 ;;; bites.el ends here

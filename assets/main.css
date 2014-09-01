@@ -1,3 +1,24 @@
+#tip {
+    background-color: Green;
+    color: white;
+    padding: 10px;
+    width: 100px;
+}
+
+#tipheart {
+    background-color: White;
+    color: Green;
+    width: 20px;
+    display: block;
+    float: left;
+    text-align: center;
+}
+
+#tipword {
+    margin-left: 10px;
+}
+
+
 .section {
     padding-bottom: 150px;
 }

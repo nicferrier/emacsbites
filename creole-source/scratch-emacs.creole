@@ -40,6 +40,9 @@ function fake-emacs {
  'package-archives
  (add-to-list 'package-archives (cons "marmalade" "http://marmalade-repo.org/packages/")))
 (customize-set-variable 'show-paren-mode t)
+(customize-set-variable 'menu-bar-mode nil)
+(customize-set-variable 'scroll-bar-mode nil)
+(customize-set-variable 'tool-bar-mode nil)
 (customize-save-customized)
 (package-refresh-contents)
 }}}
